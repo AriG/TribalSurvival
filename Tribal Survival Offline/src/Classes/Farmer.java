@@ -2,9 +2,9 @@ package Classes;
 import Main.*;
 
 
-public class ClassFarmer extends AbsMember{
+public class Farmer extends AbsMember{
 
-	public ClassFarmer() {
+	public Farmer() {
 		super('F', 100, "Producer");
 		this.chance=.500;
 	}

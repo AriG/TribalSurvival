@@ -1,12 +1,12 @@
 package Classes;
 import Main.*;
 
-public class ClassMedic extends AbsMember{
+public class Medic extends AbsMember{
 
 	int target;
 	int heal;
 	
-	public ClassMedic() {
+	public Medic() {
 		super('M', 210, "Defender");
 		this.chance=.500;
 	}

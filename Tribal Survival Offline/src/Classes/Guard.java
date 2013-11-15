@@ -1,9 +1,9 @@
 package Classes;
 import Main.*;
 
-public class ClassGuard extends AbsMember{
+public class Guard extends AbsMember{
 
-	public ClassGuard() {
+	public Guard() {
 		super('G', 200, "Defender");
 	}
 

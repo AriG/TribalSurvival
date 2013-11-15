@@ -1,9 +1,9 @@
 package Classes;
 import Main.*;
 
-public class ClassLeader extends AbsMember{
+public class Leader extends AbsMember{
 
-	public ClassLeader() {
+	public Leader() {
 		super('L', 000, "Support");
 	}
 

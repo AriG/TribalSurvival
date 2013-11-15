@@ -13,7 +13,6 @@ public class BigBang {
 	public void actState(GameState gs) {
 		gs.printUpdate();
 		gs.act();
-		//gs.tradeState();
 		endState(gs);
 	}
 
@@ -43,7 +42,7 @@ public class BigBang {
 		max = this.initialState.s.nextInt();
 		for (Tribe t : this.initialState.tribes) {
 			for (int j = 0; j < max; j++) {
-				t.members.add(j, new ClassPeasant());
+				t.members.add(j, new Peasant());
 			}
 		}
 		System.out.println("Please Enter Starting Food");
@@ -68,8 +67,8 @@ public class BigBang {
 					System.out.print(" would like in position ");
 					System.out.println(i + 1);
 					c = this.initialState.s.next().charAt(0);
-					if (ClassPeasant.findMatch((c))) {
-						startState.tribes.get(j).members.set(i,ClassPeasant.change(c));
+					if (Peasant.findMatch((c))) {
+						startState.tribes.get(j).members.set(i,Peasant.change(c));
 						j += 1;
 					}
 				}
@@ -110,16 +109,16 @@ public class BigBang {
 		Tribe testTribe2 = new Tribe();
 		Tribe testTribe3 = new Tribe();
 
-		testTribe1.members.add(new ClassFarmer());
-		testTribe1.members.add(new ClassFarmer());
-		testTribe1.members.add(new ClassFarmer());
-		testTribe1.members.add(new ClassFarmer());
-		testTribe1.members.add(new ClassFarmer());
+		testTribe1.members.add(new Farmer());
+		testTribe1.members.add(new Farmer());
+		testTribe1.members.add(new Farmer());
+		testTribe1.members.add(new Farmer());
+		testTribe1.members.add(new Farmer());
 
-		testTribe2.members.add(new ClassGuard());
+		testTribe2.members.add(new Guard());
 
-		testTribe3.members.add(new ClassWarrior());
-		testTribe3.members.add(new ClassWarrior());
+		testTribe3.members.add(new Warrior());
+		testTribe3.members.add(new Warrior());
 		
 		testTribe2.members.get(0).acted =true;
 		System.out.println(testTribe2.members.get(0).acted);

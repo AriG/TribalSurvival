@@ -1,9 +1,9 @@
 package Classes;
 import Main.*;
 
-public class ClassPeasant extends AbsMember {
+public class Peasant extends AbsMember {
 
-	public ClassPeasant() {
+	public Peasant() {
 		super('P',999,"Support");
 	}
 	
@@ -22,14 +22,14 @@ public class ClassPeasant extends AbsMember {
 	
 	static public AbsMember change(char identifier){
 		switch(identifier){
-		case 'C': return new ClassCivilian();
-		case 'F': return new ClassFarmer();
-		case 'G': return new ClassGuard();
-		case 'L': return new ClassLeader();
-		case 'M': return new ClassMedic();
-		case 'T': return new ClassThief();
-		case 'W': return new ClassWarrior();
-		default : return new ClassPeasant();
+		case 'C': return new Civilian();
+		case 'F': return new Farmer();
+		case 'G': return new Guard();
+		case 'L': return new Leader();
+		case 'M': return new Medic();
+		case 'T': return new Thief();
+		case 'W': return new Warrior();
+		default : return new Peasant();
 		}
 	}
 

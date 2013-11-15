@@ -107,7 +107,7 @@ public class GameState {
 	public void babyBoom(){
 		for(Tribe t: this.tribes){
 			for(int i = t.resources.get(AbsMember.BABIES).amount; i>0; i--){
-				t.members.add(new ClassPeasant());
+				t.members.add(new Peasant());
 			}
 			t.resources.get(AbsMember.BABIES).amount=0;
 		}
@@ -160,8 +160,8 @@ public class GameState {
 						System.out.println("What would you like your peasant to be?");
 						if(s.hasNextLine()){
 							input = s.next().charAt(0);
-							if(ClassPeasant.findMatch(input)){
-								t.members.set(t.getPeasant(), ClassPeasant.change(input));
+							if(Peasant.findMatch(input)){
+								t.members.set(t.getPeasant(), Peasant.change(input));
 								t.resources.get(AbsMember.GOLD).amount-=2;
 							}
 							else{

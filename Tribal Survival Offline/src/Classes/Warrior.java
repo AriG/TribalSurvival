@@ -1,12 +1,12 @@
 package Classes;
 import Main.*;
 
-public class ClassWarrior extends AbsMember{
+public class Warrior extends AbsMember{
 
 	int targetMember;
 	int targetTribe;
 	
-	public ClassWarrior() {
+	public Warrior() {
 		super('W', 300, "Attacker");
 		this.chance=.500;
 	}

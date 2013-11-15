@@ -1,12 +1,12 @@
 package Classes;
 import Main.*;
 
-public class ClassThief extends AbsMember{
+public class Thief extends AbsMember{
 	
 	int targetTribe;
 	char action;
 	
-	public ClassThief() {
+	public Thief() {
 		super('T', 310, "Attacker");
 		this.chance=.500;
 	}
