@@ -23,7 +23,7 @@ public class ClassMedic extends AbsMember{
 						this.status = "Wounded";
 						heal=0;
 					}
-					else{ //"Normal"
+					else if (!gs.tribes.get(tribe).allHealed()){ //"Normal"
 						System.out.println("Please input the first member of the tribe you would like to heal:");
 						if(gs.s.hasNextInt()){
 							target = gs.s.nextInt()-1;

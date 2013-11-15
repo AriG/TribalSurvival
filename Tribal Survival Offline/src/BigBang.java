@@ -20,10 +20,12 @@ public class BigBang {
 		gs.bringOutYourDead();
 		gs.printUpdate();
 		gs.dinnerTime();
+		gs.bringOutYourDead();
 		gs.printUpdate();
 		gs.babyBoom();
 		this.reorder(gs);
 		gs.tradeState();
+		this.reorder(gs);
 		gs.reset();
 		gs.currentTurn++;
 		actState(gs);

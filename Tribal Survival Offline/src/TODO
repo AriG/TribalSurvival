@@ -13,3 +13,17 @@ Can't act when wounded.
 	Graphics
 	
 	Internet
+
+	
+	
+	
+	
+	Random Events:
+	
+	Bad Harvest: Farmers produce between 0 and 3 food
+	Good Harvest: Farmers produce between 1 and 4 food instead of 1 and 3
+	Peace-time: Thieves and warriors have 1/4 chance to succeed
+	War-time: Guards and Medics have 1/4 chance to succeed
+	Wanderer: 1 Random class added to all tribes
+	Disease: 1/4 chance to wound on start up
+	Miracle:  anyone who died last turn resurects
