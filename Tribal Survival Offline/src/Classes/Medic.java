@@ -5,6 +5,7 @@ public class Medic extends AbsMember{
 
 	int target;
 	int heal;
+	int healAmnt = 2;
 	
 	public Medic() {
 		super('M', 210, "Defender");
@@ -15,7 +16,7 @@ public class Medic extends AbsMember{
 		if(this.acted==false && this.turnOrder <= turn){
 			if(this.rand() <= this.chance && !gs.tribes.get(tribe).allHealed()){
 				this.succeeded = true;
-				heal=2;
+				heal=healAmnt;
 				while(heal > 0){
 					if(this.status=="Wounded"){
 						this.status = "Normal";
@@ -54,5 +55,9 @@ public class Medic extends AbsMember{
 			}
 		this.acted = true;
 		}
+	}
+
+	void reset() {
+		healAmnt = 2;
 	}
 }

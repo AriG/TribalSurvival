@@ -5,6 +5,9 @@ public class Thief extends AbsMember{
 	
 	int targetTribe;
 	char action;
+	int foodAmnt =3;
+	int goldAmnt =2;
+	int babyAmnt =1;
 	
 	public Thief() {
 		super('T', 310, "Attacker");
@@ -35,9 +38,9 @@ public class Thief extends AbsMember{
 						action = gs.s.next().charAt(0);
 							switch(action){
 							case 'F': 
-								if(gs.tribes.get(targetTribe).resources.get(AbsMember.FOOD).amount>=3){
-									gs.tribes.get(targetTribe).resources.get(AbsMember.FOOD).amount-=3;
-									gs.tribes.get(tribe).resources.get(AbsMember.FOOD).amount+=3;
+								if(gs.tribes.get(targetTribe).resources.get(AbsMember.FOOD).amount>=foodAmnt){
+									gs.tribes.get(targetTribe).resources.get(AbsMember.FOOD).amount-=foodAmnt;
+									gs.tribes.get(tribe).resources.get(AbsMember.FOOD).amount+=foodAmnt;
 									this.acted=true;
 								}
 								else if (gs.tribes.get(targetTribe).resources.get(AbsMember.FOOD).amount!=0){
@@ -47,9 +50,9 @@ public class Thief extends AbsMember{
 								}
 								break;
 							case 'G':
-								if(gs.tribes.get(targetTribe).resources.get(AbsMember.GOLD).amount>=2){
-									gs.tribes.get(targetTribe).resources.get(AbsMember.GOLD).amount-=2;
-									gs.tribes.get(tribe).resources.get(AbsMember.GOLD).amount+=2;
+								if(gs.tribes.get(targetTribe).resources.get(AbsMember.GOLD).amount>=goldAmnt){
+									gs.tribes.get(targetTribe).resources.get(AbsMember.GOLD).amount-=goldAmnt;
+									gs.tribes.get(tribe).resources.get(AbsMember.GOLD).amount+=goldAmnt;
 									this.acted=true;
 								}
 								else if (gs.tribes.get(targetTribe).resources.get(AbsMember.GOLD).amount!=0){
@@ -59,13 +62,15 @@ public class Thief extends AbsMember{
 								}
 								break;
 							case 'B':
-								if(gs.tribes.get(targetTribe).resources.get(AbsMember.BABIES).amount>=1){
-									gs.tribes.get(targetTribe).resources.get(AbsMember.BABIES).amount-=1;
-									gs.tribes.get(tribe).resources.get(AbsMember.BABIES).amount+=1;
+								if(gs.tribes.get(targetTribe).resources.get(AbsMember.BABIES).amount>=babyAmnt){
+									gs.tribes.get(targetTribe).resources.get(AbsMember.BABIES).amount-=babyAmnt;
+									gs.tribes.get(tribe).resources.get(AbsMember.BABIES).amount+=babyAmnt;
 									this.acted=true;
 								}
-								else{
-									System.out.println("No Babies to steal");
+								else if (gs.tribes.get(targetTribe).resources.get(AbsMember.BABIES).amount!=0){
+									gs.tribes.get(tribe).resources.get(AbsMember.BABIES).amount+=gs.tribes.get(targetTribe).resources.get(AbsMember.BABIES).amount;
+									gs.tribes.get(targetTribe).resources.get(AbsMember.BABIES).amount=0;
+									this.acted=true;
 								}
 								break;
 							default:
@@ -77,5 +82,11 @@ public class Thief extends AbsMember{
 				this.acted=true;
 			}
 		}
+	}
+
+	void reset() {
+		foodAmnt =3;
+		goldAmnt =2;
+		babyAmnt =1;
 	}
 }

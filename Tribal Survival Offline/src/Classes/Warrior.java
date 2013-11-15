@@ -5,6 +5,7 @@ public class Warrior extends AbsMember{
 
 	int targetMember;
 	int targetTribe;
+	int targetAmnt=1;
 	
 	public Warrior() {
 		super('W', 300, "Attacker");
@@ -58,5 +59,9 @@ public class Warrior extends AbsMember{
 			this.acted = true;
 			gs.printUpdate();
 		}
+	}
+
+	void reset() {
+		targetAmnt=1;		
 	}
 }

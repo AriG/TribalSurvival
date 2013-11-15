@@ -36,6 +36,8 @@ public abstract class AbsMember {
 		else
 			wound();
 	}
+	
+	abstract void reset();
 
 	public abstract void act(GameState gs, int tribe, int turn);
 	

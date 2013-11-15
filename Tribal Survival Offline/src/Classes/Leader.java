@@ -11,4 +11,9 @@ public class Leader extends AbsMember{
 
 	}
 
+	void reset() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

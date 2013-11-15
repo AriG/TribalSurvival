@@ -9,4 +9,9 @@ public class Guard extends AbsMember{
 
 	public void act(GameState gs, int tribe, int turn){
 	}
+
+	void reset() {
+		// TODO Auto-generated method stub
+		
+	}
 }

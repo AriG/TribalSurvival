@@ -1,15 +1,13 @@
 package Events;
 
-public abstract class AbsEvent {
+public abstract class AbsEvent<T> {
 
 	String name;
 	double chance;
 	
-	public AbsEvent() {
-	}
-
-	public AbsEvent change(){
-		return this;
+	public AbsEvent(String name, double chance) {
+		this.name=name;
+		this.chance=chance;
 	}
 	
 }

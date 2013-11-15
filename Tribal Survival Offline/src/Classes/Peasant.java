@@ -38,6 +38,11 @@ public class Peasant extends AbsMember {
 			this.acted = false;
 		}
 	}
+
+	void reset() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
