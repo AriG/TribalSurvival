@@ -1,3 +1,5 @@
+package Classes;
+import Main.*;
 
 public class ClassLeader extends AbsMember{
 
@@ -5,7 +7,7 @@ public class ClassLeader extends AbsMember{
 		super('L', 000, "Support");
 	}
 
-	void act(GameState gs, int tribe, int turn) {
+	public void act(GameState gs, int tribe, int turn) {
 
 	}
 

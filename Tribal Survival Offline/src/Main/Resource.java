@@ -1,7 +1,8 @@
+package Main;
 public class Resource {
 
-	String name;
-	int amount;
+	public String name;
+	public int amount;
 
 	public Resource(String name, int amount) {
 		this.name = name;

@@ -1,3 +1,5 @@
+package Classes;
+import Main.*;
 
 public class ClassPeasant extends AbsMember {
 
@@ -31,7 +33,7 @@ public class ClassPeasant extends AbsMember {
 		}
 	}
 
-	void act(GameState gs, int tribe, int turn) {
+	public void act(GameState gs, int tribe, int turn) {
 		if(this.turnOrder <= turn ){
 			this.acted = false;
 		}

@@ -1,5 +1,7 @@
+package Main;
 import java.util.ArrayList;
 import java.util.List;
+import Classes.*;
 
 public class BigBang {
 	List<Tribe> tribesInit = new ArrayList<>();

@@ -1,3 +1,5 @@
+package Classes;
+import Main.*;
 
 public class ClassMedic extends AbsMember{
 

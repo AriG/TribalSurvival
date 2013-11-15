@@ -1,4 +1,6 @@
+package Main;
 import java.util.ArrayList;
+import Classes.*;
 import java.util.List;
 
 public class Tribe {

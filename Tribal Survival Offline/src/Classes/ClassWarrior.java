@@ -1,3 +1,5 @@
+package Classes;
+import Main.*;
 
 public class ClassWarrior extends AbsMember{
 

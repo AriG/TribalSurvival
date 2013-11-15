@@ -1,3 +1,6 @@
+package Classes;
+import Main.*;
+
 
 public class ClassCivilian extends AbsMember{
 
