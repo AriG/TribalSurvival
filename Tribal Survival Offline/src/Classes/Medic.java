@@ -18,12 +18,12 @@ public class Medic extends AbsMember{
 				this.succeeded = true;
 				heal=healAmnt;
 				while(heal > 0){
-					if(this.status=="Wounded"){
-						this.status = "Normal";
+					if(this.status==status.WOUNDED){
+						this.status = this.status.NORMAL;
 						heal=0;
 					}
-					else if(this.status=="Dying"){
-						this.status = "Wounded";
+					else if(this.status==this.status.DYING){
+						this.status = status.WOUNDED;
 						heal=0;
 					}
 					else if (!gs.tribes.get(tribe).allHealed()){ //"Normal"
@@ -34,15 +34,15 @@ public class Medic extends AbsMember{
 								System.out.println("I'm sorry, the number you have input is out of range.");
 							else{
 								switch(gs.tribes.get(tribe).members.get(target).status){
-								case "Wounded":
-									gs.tribes.get(tribe).members.get(target).status="Normal";
+								case WOUNDED:
+									gs.tribes.get(tribe).members.get(target).status=gs.tribes.get(tribe).members.get(target).status.NORMAL;
 									heal--;
 									break;
-								case "Dying":
-									gs.tribes.get(tribe).members.get(target).status="Wounded";
+								case DYING:
+									gs.tribes.get(tribe).members.get(target).status=gs.tribes.get(tribe).members.get(target).status.WOUNDED;
 									heal--;
 									break;
-								case "Normal":
+								case NORMAL:
 									System.out.println("I'm sorry, your target is not Wounded or Dying.");
 									break;
 								default:

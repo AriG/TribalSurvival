@@ -62,10 +62,10 @@ public class GameState {
 				System.out.print("\t");
 				if (t.members.size() > i){
 					switch(t.members.get(i).status){
-					case "Wounded":
+					case WOUNDED:
 						System.out.print("x");
 						break;
-					case "Dying":
+					case DYING:
 						System.out.print("xx");
 						break;
 					default:
@@ -86,7 +86,7 @@ public class GameState {
 	public void bringOutYourDead(){
 		for(Tribe t: this.tribes){
 			for(int i = t.members.size()-1; i>=0; i--){
-				if(t.members.get(i).status=="Dying"){
+				if(t.members.get(i).status==t.members.get(i).status.DYING){
 					t.members.remove(i);
 				}
 			}

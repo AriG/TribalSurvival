@@ -121,8 +121,7 @@ public class BigBang {
 		testTribe3.members.add(new Warrior());
 		
 		testTribe2.members.get(0).acted =true;
-		System.out.println(testTribe2.members.get(0).acted);
-
+		
 		testTribes.add(testTribe1);
 		testTribes.add(testTribe2);
 		testTribes.add(testTribe3);

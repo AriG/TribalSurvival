@@ -13,7 +13,7 @@ public class Farmer extends AbsMember{
 	}
 	
 	public void act(GameState gs, int tribe, int turn){
-		if(this.acted==false && this.turnOrder <= turn && this.status=="Normal"){
+		if(this.acted==false && this.turnOrder <= turn && this.status==status.NORMAL){
 			gs.tribes.get(tribe).resources.get(AbsMember.FOOD).amount+=foodMin;
 			if(this.rand()<=this.chance){
 				gs.tribes.get(tribe).resources.get(AbsMember.FOOD).amount+=(foodMax-foodMin);	
@@ -24,7 +24,7 @@ public class Farmer extends AbsMember{
 	}
 
 	void reset() {
-		foodMin =1;
-		foodMax =3;
+		foodMin = 1;
+		foodMax = 3;
 	}
 }

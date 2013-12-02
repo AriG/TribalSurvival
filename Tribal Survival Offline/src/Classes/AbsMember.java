@@ -6,7 +6,7 @@ public abstract class AbsMember {
 	public char symbol;
 	public int turnOrder;
 	public String type;
-	public String status;
+	public Status status;
 	public boolean succeeded;
 	public boolean acted;
 	public double chance;
@@ -19,15 +19,15 @@ public abstract class AbsMember {
 		this.symbol = symbol;
 		this.turnOrder = turnOrder;
 		this.type = type;
-		this.status = "Normal";
+		this.status = status.NORMAL;
 		this.acted = false;
 	}
 
 	public void wound() {
-		if (this.status == "Normal")
-			this.status = "Wounded";
-		else if (this.status == "Wounded")
-			this.status = "Dying";
+		if (this.status == status.NORMAL)
+			this.status = status.WOUNDED;
+		else if (this.status == status.WOUNDED)
+			this.status = status.DYING;
 	}
 
 	public void eat(Resource food) {

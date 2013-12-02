@@ -13,7 +13,7 @@ public class Warrior extends AbsMember{
 	}
 	
 	public void act(GameState gs, int tribe, int turn){
-		if(this.acted==false && this.turnOrder <= turn && this.status!="Dying"){
+		if(this.acted==false && this.turnOrder <= turn && this.status!=this.status.DYING){
 			if(this.rand()<=this.chance && gs.enemyHasAttackable(tribe)){
 				this.succeeded = true;
 				do{
@@ -38,15 +38,15 @@ public class Warrior extends AbsMember{
 							System.out.println("I'm sorry, the number you have input is out of range.");
 						else
 							switch(gs.tribes.get(targetTribe).members.get(targetMember).status){
-								case "Normal": 
-									gs.tribes.get(targetTribe).members.get(targetMember).status="Wounded";
+								case NORMAL: 
+									gs.tribes.get(targetTribe).members.get(targetMember).status=gs.tribes.get(targetTribe).members.get(targetMember).status.WOUNDED;
 									this.acted=true;
 									break;
-								case "Wounded":
-									gs.tribes.get(targetTribe).members.get(targetMember).status="Dying";
+								case WOUNDED:
+									gs.tribes.get(targetTribe).members.get(targetMember).status=gs.tribes.get(targetTribe).members.get(targetMember).status.DYING;
 									this.acted=true;
 									break;
-								case "Dying":
+								case DYING:
 									System.out.println("The member you are targetting is already dying.");
 									break;
 								default:

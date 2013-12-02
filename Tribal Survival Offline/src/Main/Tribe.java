@@ -15,7 +15,7 @@ public class Tribe {
 
 	public boolean allHealed() {
 		for (AbsMember m : members) {
-			if (m.status != "Normal")
+			if (m.status != m.status.NORMAL)
 				return false;
 		}
 		return true;
@@ -23,7 +23,7 @@ public class Tribe {
 
 	public boolean allWounded() {
 		for (AbsMember m : members) {
-			if (m.status != "Wounded")
+			if (m.status != m.status.WOUNDED)
 				return false;
 		}
 		return true;
@@ -31,7 +31,7 @@ public class Tribe {
 
 	public boolean allDying() {
 		for (AbsMember m : members) {
-			if (m.status != "Dying")
+			if (m.status != m.status.DYING)
 				return false;
 		}
 		return true;
@@ -78,13 +78,13 @@ public class Tribe {
 				input = gs.s.nextInt();
 				if (input > 0 && input <= this.members.size()) {
 					switch (this.members.get(input-1).status) {
-					case "Normal":
-						this.members.get(input-1).status = "Wounded";
+					case NORMAL:
+						this.members.get(input-1).status = this.members.get(input-1).status.WOUNDED;
 						System.out.println("Who else would you like to starve?");
 						i++;
 						break;
-					case "Wounded":
-						this.members.get(input-1).status = "Dying";
+					case WOUNDED:
+						this.members.get(input-1).status = this.members.get(input-1).status.DYING;
 						System.out.println("Who else would you like to starve?");
 						i++;
 						break;

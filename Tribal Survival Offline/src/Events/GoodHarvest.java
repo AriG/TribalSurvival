@@ -17,5 +17,4 @@ public class GoodHarvest<Tribe> extends AbsEvent<Tribe> {
 			}
 		}
 	}
-
 }

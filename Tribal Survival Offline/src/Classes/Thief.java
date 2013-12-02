@@ -15,7 +15,7 @@ public class Thief extends AbsMember{
 	}
 	
 	public void act(GameState gs, int tribe, int turn){
-		if(this.acted==false && this.turnOrder <= turn && this.status=="Normal"){
+		if(this.acted==false && this.turnOrder <= turn && this.status==this.status.NORMAL){
 			if(this.rand()<=this.chance && gs.enemyHasStealable(tribe)){
 				this.succeeded = true;
 				do{
